@@ -9,6 +9,7 @@
                         "@logos/*": ["assets/logos/*"],
                         "@context/*": ["context/*"],
                         "@hooks/*": ["hooks/*"],
+                        "@templates/*": ["templates/*"],
                         "@styles/*": ["styles/*"],
                     }
         }

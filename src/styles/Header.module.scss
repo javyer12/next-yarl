@@ -1,4 +1,4 @@
-$--white: #259cf0;
+$--white: #ffffff;
 $--black: #898989;
 $--very-light-pink: #7e0404;
 $--text-input-field: #6af5b6;
@@ -9,10 +9,12 @@ $--md: 16px;
 $--lg: 18px;
 
 .Nav {
+  z-index:2;
   display: flex;
   justify-content: space-between;
   padding: 0 24px;
-  border-bottom: 1px solid $--text-input-field;
+  border-bottom: 1px solid $--gray-20;
+  box-shadow: $--black 3px 5px 5px;
   position: fixed;
   top: 0;
   background: rgb(255, 255, 255);
@@ -20,9 +22,15 @@ $--lg: 18px;
 }
 .menu {
   display: none;
+  cursor: pointer;
 }
+.home {
+  margin-top: 1.4%;
+}
+
 .nav-logo {
   width: 100px;
+  cursor: pointer;
 }
 .navbar-left ul,
 .navbarRight ul {
@@ -43,18 +51,18 @@ $--lg: 18px;
 .navbarRight  ul li a {
   text-decoration: none;
   color: $--black !important;
-  border: 1px solid var($--white);
+  border: 1px solid $--white;
   padding: 8px;
   border-radius: 8px;
 }
 .navbar-left ul li a:hover,
 .navbarRight ul li a:hover {
-  border: 1px solid var($--hospital-green);
-  color: var($--hospital-green);
+  border: 1px solid $--hospital-green;
+  color: $--hospital-green;
 }
 .navbarEmail {
-  color: var($--black);
-  font-size: var($--sm);
+  color: $--black;
+  font-size: $--sm;
   margin-right: 12px;
 }
 .navbar-shopping-cart {
@@ -63,9 +71,9 @@ $--lg: 18px;
 .navbar-shopping-cart div {
   width: 16px;
   height: 16px;
-  background-color: var($--hospital-green);
+  background-color: $--hospital-green;
   border-radius: 50%;
-  font-size: var($--sm);
+  font-size: $--sm;
   font-weight: bold;
   position: absolute;
   top: -6px;

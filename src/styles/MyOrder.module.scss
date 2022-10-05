@@ -1,7 +1,7 @@
 $--white: #259cf0;
 $--black: #898989;
 $--very-light-pink: #8c8c8c;
-$--text-input-field: #f10000;
+$--text-input-field: #9ff5ee;
 $--gray-20: #acacac;
 $--hospital-green: #ACD9B2;
 $--sm: 14px;
@@ -20,6 +20,11 @@ $--lg: 18px;
   bottom: 0;
   border-radius: 6px;
   border: 1px solid $--very-light-pink;
+  z-index: 3;
+}
+.MyOrder:hover {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 .title-container {
   display: flex;
@@ -62,7 +67,7 @@ $--lg: 18px;
   grid-template-columns: auto 1fr;
   gap: 16px;
   align-items: center;
-  background-color: $--text-input-field;
+  background-color: $--white;
   margin-bottom: 24px;
   border-radius: 8px;
   padding: 0 24px;
@@ -81,16 +86,18 @@ $--lg: 18px;
 }
 
 .primary-button {
-  background-color: $--hospital-green;
+  background-color: $--hospital-green !important;
   border-radius: 8px;
   border: none;
-  color: $--white;
+  color: $--white !important;
   width: 100%;
   cursor: pointer;
   font-size: $--md;
   font-weight: bold;
   height: 50px;
+text-align: center;
 }
+
 @media (max-width: 640px) {
   .MyOrder {
     width: 100%;

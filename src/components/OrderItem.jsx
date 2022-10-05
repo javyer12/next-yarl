@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
+import Image from "next/image";
 import AppContext from '@context/AppContext';
 import close from '@icons/icon_close.png'
 import styles from '@styles/OrderItem.module.scss';
 
 const OrderItem = ({ product }) => {
 	const { removeFromCart } = useContext(AppContext);
-
+	console.log(product);
 	const handleRemove = product => {
 		removeFromCart(product);
 	}
@@ -13,11 +14,13 @@ const OrderItem = ({ product }) => {
 	return (
 		<div className={styles.OrderItem}>
 			<figure>
-				<img src={product.images[ 0 ]} alt={product.title} />
+				<img
+					src={product?.images[ 0 ]}
+					alt={product?.title} />
 			</figure>
-			<p>{product.title}</p>
-			<p>${product.price}</p>
-			<img className="pointer more-clickable-area" src={close} alt="close" onClick={() => handleRemove(product)} />
+			<p>{product?.title}</p>
+			<p>${product?.price}</p>
+			<Image className={styles[ "pointer", "more-clickable-area" ]} src={close} alt="close" onClick={() => handleRemove(product)} />
 		</div>
 	);
 }
