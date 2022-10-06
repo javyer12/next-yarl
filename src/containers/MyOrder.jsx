@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Link from "next/link";
 import Image from "next/image";
 import OrderItem from '@components/OrderItem';
 import AppContext from '../context/AppContext';
@@ -8,7 +7,13 @@ import arrow from '@icons/flechita.svg';
 
 const MyOrder = () => {
 	const { state, toggleOrder } = useContext(AppContext);
-
+	// console.log(state.cart);
+	// const { cart } = state;
+	// console.log(" destructuting #1:  ", typeof (cart));
+	// const ob = Object.values(cart);
+	// console.log(ob);
+	// const { title, price } = cart;
+	// console.log(" destructuting: ", title, price);
 	const sumTotal = () => {
 		const reducer = (accumalator, currentValue) => accumalator + currentValue.price;
 		const sum = state.cart.reduce(reducer, 0);

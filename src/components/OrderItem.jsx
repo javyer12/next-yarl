@@ -5,8 +5,9 @@ import close from '@icons/icon_close.png'
 import styles from '@styles/OrderItem.module.scss';
 
 const OrderItem = ({ product }) => {
+	// const { title, price } = product;
+	// console.log(title, price)
 	const { removeFromCart } = useContext(AppContext);
-	console.log(product);
 	const handleRemove = product => {
 		removeFromCart(product);
 	}
