@@ -4,6 +4,7 @@ $--very-light-pink: #8c8c8c;
 $--text-input-field: #9ff5ee;
 $--gray-20: #acacac;
 $--hospital-green: #ACD9B2;
+$--hospital-green: #13d55a;
 $--sm: 14px;
 $--md: 16px;
 $--lg: 18px;
@@ -67,7 +68,7 @@ $--lg: 18px;
   grid-template-columns: auto 1fr;
   gap: 16px;
   align-items: center;
-  background-color: $--white;
+  background-color: black;
   margin-bottom: 24px;
   border-radius: 8px;
   padding: 0 24px;
@@ -86,7 +87,7 @@ $--lg: 18px;
 }
 
 .primary-button {
-  background-color: $--hospital-green !important;
+  background-color: #ececec!important;
   border-radius: 8px;
   border: none;
   color: $--white !important;

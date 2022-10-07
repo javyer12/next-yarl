@@ -11,7 +11,6 @@ import styles from "@styles/Header.module.scss";
 
 const Header = () => {
 	const { state, toggleOrder, toggleMenu } = useContext(AppContext);
-
 	return (
 		<>
 			<nav className={styles.Nav}>
@@ -20,30 +19,30 @@ const Header = () => {
 					<Link href='/' className={styles.pointed}><Image src={logo} alt="logo" className={styles[ "nav-logo" ]} /></Link >
 					<ul>
 						<li>
-							<a href="/">All</a>
+							<Link href="/">All</Link>
 						</li>
 						<li>
-							<a href="/">Clothes</a>
+							<Link href="/">Clothes</Link>
 						</li>
 						<li>
-							<a href="/">Electronics</a>
+							<Link href="/">Electronics</Link>
 						</li>
 						<li>
-							<a href="/">Furnitures</a>
+							<Link href="/">Furnitures</Link>
 						</li>
 						<li>
-							<a href="/">Toys</a>
+							<Link href="/">Toys</Link>
 						</li>
 						<li>
-							<a href="/">Others</a>
+							<Link href="/">Others</Link>
 						</li>
 					</ul>
 				</div>
 				<div className={styles.navbarRight}>
 					<ul>
-						{/*more-clickable-area"  ${styles[ "navbar-email " ]}, ${styles.pointer}` */}
+
 						<li className={`${styles.navbarEmail} ${styles.navbarEmail}`} onClick={() => toggleMenu()}>
-							<a>platzi@example.com</a>
+							<Link href="/">platzi@example.com</Link>
 						</li>
 						<li
 							className={styles[ "navbar-shopping-cart" ]}
@@ -59,6 +58,6 @@ const Header = () => {
 			{state.orderIsOpen && <MyOrder />}
 		</>
 	);
-}
+};
 
 export default Header;

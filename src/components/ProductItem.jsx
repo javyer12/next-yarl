@@ -10,8 +10,8 @@ const ProductItem = ({ product }) => {
 
 	const handleClick = item => {
 		console.log('in cart: ', state.cart.includes(item));
-		addToCart(item)
-	}
+		addToCart(item);
+	};
 
 	return (
 		<div className={styles.ProductItem}>
@@ -38,6 +38,6 @@ const ProductItem = ({ product }) => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default ProductItem;

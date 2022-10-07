@@ -1,4 +1,13 @@
-@import 'vars';
+$--white: #259cf0;
+$--black: #898989;
+$--very-light-pink: #7e0404;
+$--text-input-field: #e6e6e6;
+$--gray-80: #acacacc3;
+$--hospital-green: #7cc386;
+$--sm: 14px;
+$--md: 16px;
+$--lg: 24px;
+
 
 .CreateAccount {
 	width: 100%;
@@ -7,10 +16,15 @@
 	place-items: center;
 }
 .CreateAccount-container {
+	background-color:white;
+	border-radius: 1rem;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	width: 300px;
+	height:70vh;
+	padding:.8rem;
+	width: 22rem;
 }
+
 .logo {
 	width: 150px;
 	margin-bottom: 48px;
@@ -18,9 +32,10 @@
 	display: none;
 }
 .title {
-	font-size: var($--lg);
+	color: $--gray-80;
+	font-size: $--lg;
 	margin-bottom: 36px;
-	text-align: start;
+	text-align: center;
 }
 .form {
 	display: flex;
@@ -36,29 +51,36 @@
 	margin-bottom: 4px;
 }
 .input {
-	background-color: var($--text-input-field);
+	background-color: $--text-input-field;
 	border: none;
 	border-radius: 8px;
 	height: 30px;
 	font-size: var($--md);
 	padding: 6px;
 	margin-bottom: 12px;
+	color: black;
 }
 .input-name,
 .input-email,
 .input-password {
 	margin-bottom: 22px;
 }
+.input::placeholder {
+	color: $--hospital-green;
+	font-size: $--md;
+}
+
 .primary-button {
-	background-color: var($--hospital-green);
+	background-color: $--hospital-green;
 	border-radius: 8px;
 	border: none;
 	color: var($--white);
-	width: 100%;
 	cursor: pointer;
 	font-size: var($--md);
 	font-weight: bold;
 	height: 50px;
+	margin-top: 1rem;
+	width: 100%;
 }
 .login-button {
 	margin-top: 14px;

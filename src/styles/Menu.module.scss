@@ -1,9 +1,9 @@
 $--white: #259cf0;
-$--black: #898989;
+$--black: #000000;
 $--very-light-pink: #f4c4c4;
 $--text-input-field: #f10000;
 $--gray-20: #acacac;
-$--hospital-green: #ACD9B2;
+$--hospital-green: #00b819;
 $--sm: 14px;
 $--md: 16px;
 $--lg: 18px;
@@ -12,18 +12,26 @@ $--lg: 18px;
 .Menu {
 	width: 100px;
 	height: auto;
-	border: 1px solid $--very-light-pink;
 	border-radius: 6px;
 	padding: 20px 20px 0 20px;
 	position: absolute;
 	top: 60px;
 	right: 50px;
-	background-color: rgb(186, 252, 246);
+	background-color: rgb(255, 255, 255);
 }
 .Menu ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+}
+.Menu ul li button {
+	background-color: transparent;
+	border: none;
+	color: black;
+	cursor: pointer;
+	font-size: 17px;
+	font-weight: bold;
+	margin-bottom:4px;
 }
 .Menu ul li {
 	text-align: end;
@@ -34,7 +42,7 @@ $--lg: 18px;
 }
 .Menu ul li:last-child {
 	padding-top: 20px;
-	border-top: 1px solid $--very-light-pink;
+	border-top: 1px solid $--gray-20;
 }
 .Menu ul li:last-child a {
 	color: $--hospital-green !important;
@@ -45,4 +53,7 @@ $--lg: 18px;
 	text-decoration: none;
 	margin-bottom: 20px;
 	display: inline-block;
+}
+.sign  a{
+	margin: 1.5px;
 }

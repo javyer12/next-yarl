@@ -13,12 +13,12 @@ const ProductList = () => {
 			<div className={styles.ProductList}>
 				{products.map((product) => {
 					if (product.images.length > 0 && product.images[ 0 ] !== " ") {
-						return <ProductItem product={product} key={product.id} />
+						return <ProductItem product={product} key={product.id} />;
 					}
 				})}
 			</div>
 		</section>
 	);
-}
+};
 
 export default ProductList;
